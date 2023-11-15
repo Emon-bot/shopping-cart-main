@@ -26,15 +26,22 @@ function phoneTotalPrice(newPhoneNumber){
 }
 
 
+
+
+
 document.getElementById('btn-plus').addEventListener('click', function(){
     const newPhoneNumber = updatePhoneNumber(true);
 
     phoneTotalPrice(newPhoneNumber);
+    calculateSubTotal();
+
 });
+  
 
 document.getElementById('btn-minus').addEventListener('click',
 function(){
     const newPhoneNumber = updatePhoneNumber(false);
 
     phoneTotalPrice(newPhoneNumber);
+    calculateSubTotal();
 })
